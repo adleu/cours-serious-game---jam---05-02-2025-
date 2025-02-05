@@ -97,6 +97,7 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4y5nl")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3yrti")
 
 [node name="Acceuil" parent="." instance=ExtResource("3_w2qtw")]
+visible = false
 position = Vector2(-493, -234)
 
 [node name="Etagère" parent="." instance=ExtResource("4_rvbnc")]

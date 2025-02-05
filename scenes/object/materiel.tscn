@@ -53,11 +53,13 @@ theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4n8bj")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a8c46")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -136.667
-offset_top = 243.333
-offset_right = -96.6667
-offset_bottom = 266.333
-scale = Vector2(5.93333, 4.86667)
+offset_left = -213.333
+offset_top = 223.333
+offset_right = -173.333
+offset_bottom = 246.333
+scale = Vector2(10.989, 8.5411)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "text"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Sprite2D/Button" to="." method="_on_button_pressed"]

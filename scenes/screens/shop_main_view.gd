@@ -20,6 +20,7 @@ func _on_button_acceuil_pressed() -> void:
 	
 func _on_button_etagere_pressed() -> void:
 	$"Etagère".visible = true
+	$"Etagère"._initialiser()
 	_clear_main_view()
 
 func _on_button_commentaire_pressed() -> void:

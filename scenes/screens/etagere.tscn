@@ -22,24 +22,44 @@ texture = ExtResource("1_tqn85")
 
 [node name="objet" type="Node2D" parent="."]
 
-[node name="Materiel" parent="objet" instance=ExtResource("2_c5lmf")]
+[node name="Prop" type="Node2D" parent="objet"]
+
+[node name="Materiel6" parent="objet/Prop" instance=ExtResource("2_c5lmf")]
+position = Vector2(475, 418)
+scale = Vector2(0.26302, 0.27605)
+
+[node name="Materiel7" parent="objet/Prop" instance=ExtResource("2_c5lmf")]
+position = Vector2(498, 109)
+scale = Vector2(0.150213, 0.245738)
+
+[node name="Materiel8" parent="objet/Prop" instance=ExtResource("2_c5lmf")]
+position = Vector2(535, 293)
+scale = Vector2(0.154077, 0.195082)
+
+[node name="Materiel9" parent="objet/Prop" instance=ExtResource("2_c5lmf")]
+position = Vector2(655, 120)
+scale = Vector2(0.154077, 0.195082)
+
+[node name="vraiobjet" type="Node2D" parent="objet"]
+
+[node name="Materiel" parent="objet/vraiobjet" instance=ExtResource("2_c5lmf")]
 position = Vector2(331, 101)
 scale = Vector2(0.180001, 0.3)
 
-[node name="Materiel2" parent="objet" instance=ExtResource("2_c5lmf")]
+[node name="Materiel2" parent="objet/vraiobjet" instance=ExtResource("2_c5lmf")]
 position = Vector2(619, 203)
 scale = Vector2(0.154077, 0.195082)
 
-[node name="Materiel3" parent="objet" instance=ExtResource("2_c5lmf")]
+[node name="Materiel3" parent="objet/vraiobjet" instance=ExtResource("2_c5lmf")]
 position = Vector2(337, 425)
 scale = Vector2(0.26302, 0.27605)
 
-[node name="Materiel4" parent="objet" instance=ExtResource("2_c5lmf")]
+[node name="Materiel4" parent="objet/vraiobjet" instance=ExtResource("2_c5lmf")]
 position = Vector2(348, 291)
 scale = Vector2(0.211387, 0.222459)
 
-[node name="Materiel5" parent="objet" instance=ExtResource("2_c5lmf")]
-position = Vector2(611, 415)
+[node name="Materiel5" parent="objet/vraiobjet" instance=ExtResource("2_c5lmf")]
+position = Vector2(626, 422)
 scale = Vector2(0.26302, 0.27605)
 
 [node name="Button" type="Button" parent="."]

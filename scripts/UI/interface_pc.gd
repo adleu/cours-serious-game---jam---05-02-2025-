@@ -36,8 +36,6 @@ func _on_button_pressed() -> void:
 			$step_1.visible = false
 			$step_2.visible = true
 			$step_2/Label.text = plaqueInfoArray[indice]
-			GameManager.object_objectif.append(plaqueInfoArray[indice].split("ref :")[1])
-			print(GameManager.object_objectif)
 		else :
 			invalide.visible = true
 

@@ -30,15 +30,20 @@ var image_dict = {
 	"rizlac": rizlac,
 	"vilebrequin": vilebrequin
 }
-var random_key
+var ref
 
 func _ready():
 	pass
 
 func _on_button_pressed() -> void:
-	print(random_key)
+	GameManager.current_object = ref
+	print(GameManager.current_object)
+	visible = false
 
-func setTexture(obj) -> void:
-	random_key = obj
-	$Sprite2D.texture = image_dict[random_key]
-	$Label.text = random_key
+func setTexture(text,obj) -> void:
+	ref = text
+	$Sprite2D.texture = obj
+	
+
+func setLabel(str) -> void:
+	$Label.text = str
