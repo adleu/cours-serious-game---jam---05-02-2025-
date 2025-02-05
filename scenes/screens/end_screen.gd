@@ -18,4 +18,4 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	pass # Replace with function body.
+	Utils.change_scene("res://scenes/screens/shop_main_view.tscn")
