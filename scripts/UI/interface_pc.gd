@@ -1,7 +1,7 @@
 extends Control
 
-var plaqueArray = ["25-X85-77","M5-TRC-LS"]
-var plaqueInfoArray = ["huile moteur : ref <zorblux>"]
+var plaqueArray = GameManager.plaqueArray
+var plaqueInfoArray = GameManager.plaqueInfoArray
 
 @onready
 var plaqueString = $step_1/TextEdit

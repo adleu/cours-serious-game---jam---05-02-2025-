@@ -27,6 +27,10 @@ window/size/viewport_height=540
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[gui]
+
+theme/custom_font="res://assets/fonts/Silver.ttf"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
