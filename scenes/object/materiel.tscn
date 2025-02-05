@@ -57,6 +57,7 @@ offset_left = -136.667
 offset_top = 243.333
 offset_right = -96.6667
 offset_bottom = 266.333
-scale = Vector2(8.2, 4.86667)
+scale = Vector2(5.93333, 4.86667)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 
 [connection signal="pressed" from="Sprite2D/Button" to="." method="_on_button_pressed"]

@@ -41,3 +41,4 @@ func _on_button_pressed() -> void:
 func setTexture(obj) -> void:
 	random_key = obj
 	$Sprite2D.texture = image_dict[random_key]
+	$Label.text = random_key

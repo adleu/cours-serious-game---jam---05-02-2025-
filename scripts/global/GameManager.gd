@@ -2,8 +2,10 @@ extends Node
 var Score
 
 var plaqueArray = ["","27-X85-77","M5-TRC-LS","89-CCA-LS","15-VBX-M5","99-bbb-77"]
-var plaqueInfoArray = ["","huile moteur : ref <zorblux>","batterie ref : X78","AD BLUE", "Ampoule feu avant Norotau", "pneu été 205 55 R16" ]
+var plaqueInfoArray = ["","huile moteur, ref :<zorblux>","batterie, ref : X78","AD BLUE", "Ampoule feu avant, ref : Norotau", "pneu été, ref : 205 55 R16" ]
 var characDialog = ["","Bonjour monsieur ahahaha ! Ma plaque est la suivante : 27-X85-77 !!!","..... bonjour..... j'ai besoin de batterie.... ma plaque .....M5-TRC-LS ","fdfdsAD BLUE", "Ampoule fefdfsdfsfdsu avant Norotau", "pnefdsdfdfsu été 205 55 R16" ]
+var object_objectif = ["",]
+var current_object
 
 var current_event = 0
 

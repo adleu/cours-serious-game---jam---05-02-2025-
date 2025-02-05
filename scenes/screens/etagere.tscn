@@ -24,10 +24,11 @@ texture = ExtResource("1_tqn85")
 
 [node name="Materiel" parent="objet" instance=ExtResource("2_c5lmf")]
 position = Vector2(331, 101)
+scale = Vector2(0.180001, 0.3)
 
 [node name="Materiel2" parent="objet" instance=ExtResource("2_c5lmf")]
 position = Vector2(619, 203)
-scale = Vector2(0.234079, 0.195082)
+scale = Vector2(0.154077, 0.195082)
 
 [node name="Materiel3" parent="objet" instance=ExtResource("2_c5lmf")]
 position = Vector2(337, 425)

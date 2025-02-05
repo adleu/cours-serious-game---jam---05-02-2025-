@@ -28,6 +28,7 @@ func _trigger_event(indice):
 		2: 
 			$Container/PNJ_3.visible = true
 			dialog.display_text(GameManager.characDialog[indice])
+	print(GameManager.plaqueInfoArray[indice].split("ref : ")[1])
 	
 
 func _on_button_pressed() -> void:
