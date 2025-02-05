@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnsxfjpoabls7"]
+[gd_scene load_steps=8 format=3 uid="uid://dnsxfjpoabls7"]
 
 [ext_resource type="Texture2D" uid="uid://c0h0tvmpvh2sq" path="res://avis_jeff.png" id="1_y7ite"]
 [ext_resource type="Script" path="res://avis.gd" id="2_afcig"]
@@ -6,13 +6,48 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0h4p6"]
 bg_color = Color(0.420001, 0.687968, 0, 1)
 
+[sub_resource type="FontFile" id="FontFile_gaxfv"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/28/0/ascent = 0.0
+cache/0/28/0/descent = 0.0
+cache/0/28/0/underline_position = 0.0
+cache/0/28/0/underline_thickness = 0.0
+cache/0/28/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ho513"]
 bg_color = Color(1, 0.339535, 0.308065, 1)
+
+[sub_resource type="FontFile" id="FontFile_blin1"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [sub_resource type="Gradient" id="Gradient_rrqt1"]
 colors = PackedColorArray(0, 1, 0, 1, 1, 1, 1, 0.976471)
 
 [node name="Node2D" type="Node2D"]
+texture_filter = 1
 position = Vector2(-349, -9)
 
 [node name="AvisJeff" type="Sprite2D" parent="."]
@@ -25,31 +60,35 @@ script = ExtResource("2_afcig")
 offset_left = -192.0
 offset_top = -293.0
 offset_right = 473.0
-offset_bottom = -202.0
+offset_bottom = -187.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0h4p6")
 
 [node name="bonne_option" type="RichTextLabel" parent="AvisJeff/Panel"]
 layout_mode = 0
 offset_right = 667.0
-offset_bottom = 98.0
+offset_bottom = 106.0
+theme_override_fonts/normal_font = SubResource("FontFile_gaxfv")
+theme_override_font_sizes/normal_font_size = 24
 text = "Merci pour votre retour positif ! Nous sommes ravis d'apprendre que vous avez apprécié notre service. Votre satisfaction est notre priorité. N'hésitez pas à revenir chez Norauto pour tous vos besoins automobiles. À bientôt !"
 
 [node name="Button" type="Button" parent="AvisJeff/Panel"]
 layout_mode = 0
 offset_right = 668.0
-offset_bottom = 91.0
+offset_bottom = 109.0
 
 [node name="Panel2" type="Panel" parent="AvisJeff"]
-offset_left = -188.554
-offset_top = -185.813
-offset_right = 473.446
-offset_bottom = -94.8134
+offset_left = -188.553
+offset_top = -176.285
+offset_right = 473.447
+offset_bottom = -85.2849
 theme_override_styles/panel = SubResource("StyleBoxFlat_ho513")
 
 [node name="mauvaise_option" type="RichTextLabel" parent="AvisJeff/Panel2"]
 layout_mode = 0
 offset_right = 661.0
 offset_bottom = 98.0
+theme_override_fonts/normal_font = SubResource("FontFile_blin1")
+theme_override_font_sizes/normal_font_size = 24
 
 [node name="Button" type="Button" parent="AvisJeff/Panel2"]
 layout_mode = 0
