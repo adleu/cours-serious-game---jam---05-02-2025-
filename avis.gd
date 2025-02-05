@@ -18,6 +18,8 @@ var pecci = {
 	"mauvaise_reponse": "Le délai dépend, revenez plus tard.",
 }
 
+# pour abdel
+
 var avis = [jeff, kevin, pecci]
 var avis_index = 0
 
