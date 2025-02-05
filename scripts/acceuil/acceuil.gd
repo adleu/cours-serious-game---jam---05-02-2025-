@@ -1,18 +1,28 @@
-extends Control
+extends Node2D
 
 @onready
 var dialog = $TextBox
 
+var triggered = [false, false, false, false]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-	dialog.display_text("dfnfjsdfrgskbgjgsbbgbgsvbgjkfg")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	for i in triggered.size():
+		if !triggered[i] && GameManager.current_event == i:
+			_trigger_event(i)
+	
+func _trigger_event(indice):
+	triggered[indice] = true
+	print(indice)
+	match indice:
+		1: 
+			$Container/PNJ_1.visible = true
+			dialog.display_text(GameManager.characDialog[indice])
+	
 
 func _on_button_pressed() -> void:
 	$InterfacePc.visible = true
@@ -20,3 +30,4 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	visible = false
+	

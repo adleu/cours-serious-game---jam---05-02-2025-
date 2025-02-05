@@ -46,11 +46,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Sprite2D" type="AnimatedSprite2D"]
+[node name="PNJ2" type="AnimatedSprite2D"]
 texture_filter = 1
 position = Vector2(8.5, 10.625)
 scale = Vector2(2.0625, 2.0625)
 sprite_frames = SubResource("SpriteFrames_d22m1")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.0735267
+frame_progress = 0.0404775
