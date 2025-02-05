@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://din8ai5jfoa5k" path="res://assets/sprites/assset_Etagere/image.png" id="1_tqn85"]
 [ext_resource type="Script" path="res://scenes/screens/etagere.gd" id="1_wa1fq"]
-[ext_resource type="PackedScene" path="res://scenes/object/materiel.tscn" id="2_c5lmf"]
+[ext_resource type="PackedScene" uid="uid://co36b0xtfm1hw" path="res://scenes/object/materiel.tscn" id="2_c5lmf"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wa1fq")
