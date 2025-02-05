@@ -1,0 +1,72 @@
+[gd_scene load_steps=16 format=3 uid="uid://rxt2kuiqvpbd"]
+
+[ext_resource type="Script" path="res://scripts/acceuil/acceuil.gd" id="1_4ps7f"]
+[ext_resource type="Texture2D" uid="uid://dlmdb3rtcyibh" path="res://assets/sprites/image_de_fond.png" id="1_nmvsf"]
+[ext_resource type="PackedScene" uid="uid://hhv2a7qado4j" path="res://scenes/UI/interface_pc.tscn" id="3_yfa5a"]
+[ext_resource type="PackedScene" uid="uid://shntoqmiw8vt" path="res://scenes/UI/text_box.tscn" id="4_nri71"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_awg74"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e73rt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cowed"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_677ub"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vocm7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gxr3m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qxk2s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bk422"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nrg8y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ag3sb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jw2td"]
+
+[node name="Acceuil" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_4ps7f")
+
+[node name="ImageDeFond" type="Sprite2D" parent="."]
+position = Vector2(531.5, 5)
+scale = Vector2(1.04395, 1.06836)
+texture = ExtResource("1_nmvsf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 129.0
+offset_right = 998.0
+offset_bottom = 546.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_awg74")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_e73rt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cowed")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_677ub")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vocm7")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_gxr3m")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qxk2s")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_bk422")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nrg8y")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ag3sb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jw2td")
+
+[node name="InterfacePc" parent="." instance=ExtResource("3_yfa5a")]
+visible = false
+layout_mode = 1
+offset_left = 21.0
+offset_top = -4.0
+offset_right = 21.0
+offset_bottom = -4.0
+
+[node name="TextBox" parent="." instance=ExtResource("4_nri71")]
+offset_left = 205.0
+offset_top = 196.0
+offset_right = 227.0
+offset_bottom = 234.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

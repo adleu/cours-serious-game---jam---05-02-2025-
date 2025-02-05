@@ -1,0 +1,177 @@
+[gd_scene load_steps=8 format=3 uid="uid://hhv2a7qado4j"]
+
+[ext_resource type="Script" path="res://scripts/UI/interface_pc.gd" id="1_cxcwi"]
+[ext_resource type="Texture2D" uid="uid://c8ajwfayl6y1u" path="res://assets/sprites/jb0u633yc7v81.png" id="1_h62iv"]
+[ext_resource type="PackedScene" uid="uid://bt6lv0mg6s4m0" path="res://assets/sprites/3d/skoda.fbx" id="3_gn4hw"]
+[ext_resource type="Texture2D" uid="uid://dlmdb3rtcyibh" path="res://assets/sprites/image_de_fond.png" id="3_wrfnw"]
+
+[sub_resource type="Animation" id="Animation_0jkbl"]
+resource_name = "car_rota"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("skoda:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 6.28319, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wob0p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("skoda:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lb22p"]
+_data = {
+"RESET": SubResource("Animation_wob0p"),
+"car_rota": SubResource("Animation_0jkbl")
+}
+
+[node name="InterfacePc" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cxcwi")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite" type="Sprite2D" parent="MarginContainer"]
+texture_filter = 1
+position = Vector2(485.89, 263.147)
+scale = Vector2(0.893952, 1.04557)
+texture = ExtResource("1_h62iv")
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(215, -256)
+scale = Vector2(1.49213, 1.58582)
+texture = ExtResource("3_wrfnw")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 16.0
+offset_right = 151.0
+offset_bottom = 78.0
+text = "RETOUR"
+
+[node name="step_1" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextEdit" type="TextEdit" parent="step_1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 308.0
+offset_top = 111.0
+offset_right = 536.0
+offset_bottom = 157.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/background_color = Color(0.847474, 0.847474, 0.847474, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+placeholder_text = "XX-XXX-XX"
+
+[node name="Label" type="Label" parent="step_1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 333.0
+offset_top = 62.0
+offset_right = 557.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Plaque d'immatriculation :"
+
+[node name="Button" type="Button" parent="step_1"]
+layout_mode = 0
+offset_left = 585.0
+offset_top = 130.0
+offset_right = 639.0
+offset_bottom = 178.0
+text = "OK"
+
+[node name="Label2" type="Label" parent="step_1"]
+visible = false
+layout_mode = 0
+offset_left = 338.0
+offset_top = 186.0
+offset_right = 499.0
+offset_bottom = 209.0
+theme_override_colors/font_color = Color(0.701961, 0, 0, 1)
+text = "plaque invalide !"
+
+[node name="step_2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 371.0
+offset_top = 72.0
+offset_right = 564.0
+offset_bottom = 160.0
+
+[node name="Label" type="Label" parent="step_2"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = -31.0
+offset_right = 233.0
+offset_bottom = 61.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="step_2"]
+clip_contents = true
+layout_mode = 0
+offset_left = -148.0
+offset_top = -187.0
+offset_right = 227.0
+offset_bottom = 164.0
+
+[node name="SubViewport" type="SubViewport" parent="step_2/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="skoda" parent="step_2/SubViewportContainer/SubViewport" instance=ExtResource("3_gn4hw")]
+
+[node name="Camera3D" type="Camera3D" parent="step_2/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.6794, 40.3258)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="step_2/SubViewportContainer/SubViewport"]
+libraries = {
+"": SubResource("AnimationLibrary_lb22p")
+}
+autoplay = "car_rota"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="step_1/Button" to="." method="_on_button_pressed"]
