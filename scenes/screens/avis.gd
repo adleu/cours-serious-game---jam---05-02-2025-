@@ -22,13 +22,13 @@ var avis = [jeff, kevin, pecci]
 var avis_index = 0
 
 @onready
-var bonne_reponse = $Panel/bonne_option
+var bonne_reponse = $"../Panel/bonne_option"
 @onready
-var mauvaise_reponse = $Panel2/mauvaise_option
+var mauvaise_reponse = $"../Panel2/mauvaise_option"
 @onready
-var submit = $Button
+var submit = $"../Button"
 @onready
-var particle = $CPUParticles2D
+var particle = $"../CPUParticles2D"
 
 var selected_reponse = -1
 
@@ -46,7 +46,7 @@ func _process(delta: float) -> void:
 
 func _on_button_button_down() -> void:
 	if avis_index == 2:
-		visible = false
+		
 		return 
 	
 	

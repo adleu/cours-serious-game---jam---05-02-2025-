@@ -11,11 +11,30 @@ config_version=5
 [application]
 
 config/name="cours serious game - jam - 05/02/2025"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://scenes/screens/shop_main_view.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://scripts/global/GameManager.gd"
+Utils="*res://scripts/global/Utils.gd"
+
+[display]
+
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom_font="res://assets/fonts/Silver.ttf"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+2d/snap/snap_2d_transforms_to_pixel=true
+textures/defaults/default_clear_color=Color(0.3, 0.3, 0.3, 1)
