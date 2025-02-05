@@ -40,3 +40,8 @@ func _on_button_pressed() -> void:
 			print(GameManager.object_objectif)
 		else :
 			invalide.visible = true
+
+
+func _on_button_pressed_retour_pc() -> void:
+	$step_2.visible = false
+	$step_1.visible = true

@@ -115,6 +115,7 @@ offset_right = 557.0
 offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 20
 text = "Plaque d'immatriculation :"
 
 [node name="Button" type="Button" parent="step_1"]
@@ -148,7 +149,7 @@ offset_left = -20.0
 offset_top = -31.0
 offset_right = 233.0
 offset_bottom = 61.0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="step_2"]
 clip_contents = true
@@ -174,5 +175,14 @@ libraries = {
 }
 autoplay = "car_rota"
 
+[node name="Button" type="Button" parent="step_2"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 124.0
+offset_right = 268.0
+offset_bottom = 155.0
+text = "retour"
+
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="step_1/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="step_2/Button" to="." method="_on_button_pressed_retour_pc"]

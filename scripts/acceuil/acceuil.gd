@@ -20,15 +20,19 @@ func _trigger_event(indice):
 	print(indice)
 	match indice:
 		1: 
+			hide_pnj()
 			$Container/PNJ_1.visible = true
 			dialog.display_text(GameManager.characDialog[indice])
 		2: 
+			hide_pnj()
 			$Container/PNJ_2.visible = true
 			dialog.display_text(GameManager.characDialog[indice])
 		2: 
+			hide_pnj()
 			$Container/PNJ_3.visible = true
 			dialog.display_text(GameManager.characDialog[indice])
 	print(GameManager.plaqueInfoArray[indice].split("ref : ")[1])
+
 	
 
 func _on_button_pressed() -> void:
