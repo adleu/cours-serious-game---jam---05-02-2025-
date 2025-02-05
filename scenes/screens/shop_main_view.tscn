@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/screens/shop_main_view.gd" id="1_voflh"]
 [ext_resource type="Texture2D" uid="uid://cc2pfp4m4hkka" path="res://assets/sprites/BG2.png" id="1_wm268"]
 [ext_resource type="PackedScene" uid="uid://rxt2kuiqvpbd" path="res://scenes/screens/acceuil.tscn" id="3_w2qtw"]
-[ext_resource type="PackedScene" uid="uid://sstgr7trtn4o" path="res://scenes/screens/etagere.tscn" id="4_rvbnc"]
+[ext_resource type="PackedScene" uid="uid://bfvr6j5x2vooa" path="res://scenes/screens/etagere.tscn" id="4_rvbnc"]
 [ext_resource type="PackedScene" uid="uid://b7x7ykjtgj0n4" path="res://scenes/object/exclamation_mark.tscn" id="4_yenar"]
 [ext_resource type="PackedScene" path="res://node_2d.tscn" id="6_kx8co"]
 
@@ -41,11 +41,9 @@ texture = ExtResource("1_wm268")
 position = Vector2(-72, 68)
 
 [node name="exclamation2" parent="mark" instance=ExtResource("4_yenar")]
-modulate = Color(0.332881, 0.332881, 0.332881, 0.431373)
 position = Vector2(-29, -46)
 
 [node name="exclamation3" parent="mark" instance=ExtResource("4_yenar")]
-modulate = Color(0.333333, 0.333333, 0.333333, 0.431373)
 position = Vector2(224, -122)
 
 [node name="bouton" type="Node2D" parent="."]
