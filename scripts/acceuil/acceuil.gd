@@ -22,6 +22,12 @@ func _trigger_event(indice):
 		1: 
 			$Container/PNJ_1.visible = true
 			dialog.display_text(GameManager.characDialog[indice])
+		2: 
+			$Container/PNJ_2.visible = true
+			dialog.display_text(GameManager.characDialog[indice])
+		2: 
+			$Container/PNJ_3.visible = true
+			dialog.display_text(GameManager.characDialog[indice])
 	
 
 func _on_button_pressed() -> void:
@@ -30,4 +36,12 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	visible = false
+	
+func hide_pnj():
+	$Container/PNJ_1.visible = false
+	$Container/PNJ_1.visible = false
+	$Container/PNJ_1.visible = false
+
+
+	
 	
