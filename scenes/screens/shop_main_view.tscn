@@ -41,11 +41,9 @@ texture = ExtResource("1_wm268")
 position = Vector2(-72, 68)
 
 [node name="exclamation2" parent="mark" instance=ExtResource("4_yenar")]
-modulate = Color(0.332881, 0.332881, 0.332881, 0.431373)
 position = Vector2(-29, -46)
 
 [node name="exclamation3" parent="mark" instance=ExtResource("4_yenar")]
-modulate = Color(0.333333, 0.333333, 0.333333, 0.431373)
 position = Vector2(224, -122)
 
 [node name="bouton" type="Node2D" parent="."]

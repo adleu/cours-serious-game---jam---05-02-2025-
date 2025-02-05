@@ -1,14 +1,15 @@
-extends Node2D
+extends Control
 
-@onready var anim = $AnimatedSprite2D
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	anim.play("default")
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-func change_Alpha(x)-> void:
-	$AnimatedSprite2D.modulate.a = x
+
+func _on_button_pressed() -> void:
+	Utils.change_scene("res://scenes/screens/shop_main_view.tscn")

@@ -6,6 +6,8 @@ var dialog = $TextBox
 @onready
 var button_donner = $Button3
 
+var finished = false
+
 var text_finished = false
 var timer_before_next_event = -1
 
@@ -17,9 +19,11 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if finished:
+		hide_pnj()
 	if timer_before_next_event != -1 && timer_before_next_event > 0 :
 		timer_before_next_event =- delta
-	if timer_before_next_event <= 0 &&  timer_before_next_event != -1:
+	if timer_before_next_event <= 0 && timer_before_next_event != -1:
 		GameManager.increment_event()
 		timer_before_next_event = -1
 		
@@ -47,11 +51,21 @@ func _trigger_event(indice):
 			dialog.display_text(GameManager.characDialog[indice])
 			text_finished = false
 		3: 
-			print("event 3")
+			hide_pnj()
+			$Container/PNJ_1.visible = true
+			dialog.display_text(GameManager.characDialog[indice])
+			text_finished = false
+		4: 
+			hide_pnj()
+			$Container/PNJ_2.visible = true
+			dialog.display_text(GameManager.characDialog[indice])
+			text_finished = false
+		5: 
 			hide_pnj()
 			$Container/PNJ_3.visible = true
 			dialog.display_text(GameManager.characDialog[indice])
 			text_finished = false
+			
 
 
 func _on_button_pressed() -> void:
@@ -60,6 +74,7 @@ func _on_button_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	visible = false
+	$TextBox2.visible = false
 	
 func hide_pnj():
 	$Container/PNJ_1.visible = false
@@ -67,19 +82,18 @@ func hide_pnj():
 	$Container/PNJ_3.visible = false
 	
 func _on_button_3_pressed() -> void:
-	if(text_finished):
+	if(true):
 		if GameManager.current_object == GameManager.object_objectif[GameManager.current_event]:
 			dialog.display_text("merci ! à la revoyure")
 			text_finished = false
+			if GameManager.current_event == 5:
+				finished=true
 			timer_before_next_event = 10
 			GameManager.updateReputation(GameManager.reputation + 5)
 		else:
-			dialog.display_text("Ce n'est pas le bon bing chilling")
-			text_finished = false
-			GameManager.updateReputation(GameManager.reputation - 10)
-			
-	print((GameManager.reputation))
-			
+			$TextBox2.visible = true
+			$TextBox2.display_text("Ce n'est pas le bon bing chilling")
+			GameManager.updateReputation(GameManager.reputation - 10)			
 
 
 func _on_text_box_finished_displaying() -> void:

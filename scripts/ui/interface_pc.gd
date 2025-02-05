@@ -12,6 +12,8 @@ var text_empty = true
 @onready
 var invalide = $step_1/Label2
 
+@onready
+var exm1 = $mark/exclamation
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,6 +38,7 @@ func _on_button_pressed() -> void:
 			$step_1.visible = false
 			$step_2.visible = true
 			$step_2/Label.text = plaqueInfoArray[indice]
+
 		else :
 			invalide.visible = true
 
