@@ -27,5 +27,6 @@ func _on_button_commentaire_pressed() -> void:
 	pass
 
 func _clear_main_view() -> void:
-	$Bg1.visible = false
+	#$Bg1.visible = false
+	pass
 	

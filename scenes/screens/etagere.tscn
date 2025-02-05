@@ -24,10 +24,11 @@ texture = ExtResource("1_tqn85")
 
 [node name="Materiel" parent="objet" instance=ExtResource("2_c5lmf")]
 position = Vector2(331, 101)
+scale = Vector2(0.180001, 0.3)
 
 [node name="Materiel2" parent="objet" instance=ExtResource("2_c5lmf")]
 position = Vector2(619, 203)
-scale = Vector2(0.234079, 0.195082)
+scale = Vector2(0.154077, 0.195082)
 
 [node name="Materiel3" parent="objet" instance=ExtResource("2_c5lmf")]
 position = Vector2(337, 425)
@@ -40,3 +41,13 @@ scale = Vector2(0.211387, 0.222459)
 [node name="Materiel5" parent="objet" instance=ExtResource("2_c5lmf")]
 position = Vector2(611, 415)
 scale = Vector2(0.26302, 0.27605)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 125.0
+offset_top = 11.0
+offset_right = 248.0
+offset_bottom = 73.0
+scale = Vector2(0.84, 0.8)
+text = "RETOUR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
