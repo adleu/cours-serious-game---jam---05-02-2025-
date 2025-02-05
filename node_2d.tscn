@@ -26,44 +26,52 @@ script = ExtResource("2_afcig")
 offset_left = -192.0
 offset_top = -293.0
 offset_right = 473.0
-offset_bottom = -187.0
+offset_bottom = 38.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0h4p6")
 
 [node name="bonne_option" type="Label" parent="AvisJeff/Panel"]
 layout_mode = 0
 offset_right = 667.0
-offset_bottom = 106.0
-text = "Merci pour votre retour positif ! Nous sommes ravis d'apprendre que vous avez apprécié notre service. Votre satisfaction est notre priorité. N'hésitez pas à revenir chez Norauto pour tous vos besoins automobiles. À bientôt !"
+offset_bottom = 276.0
+text = "
+"
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="AvisJeff/Panel"]
 layout_mode = 0
 offset_right = 668.0
-offset_bottom = 109.0
+offset_bottom = 304.0
+theme_override_font_sizes/font_size = 32
+flat = true
+autowrap_mode = 2
 
 [node name="Panel2" type="Panel" parent="AvisJeff"]
-offset_left = -188.553
-offset_top = -176.285
-offset_right = 473.447
-offset_bottom = -85.2849
+offset_left = -186.0
+offset_top = 60.0
+offset_right = 476.0
+offset_bottom = 308.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ho513")
 
 [node name="mauvaise_option" type="Label" parent="AvisJeff/Panel2"]
 layout_mode = 0
 offset_right = 661.0
-offset_bottom = 98.0
+offset_bottom = 253.0
 autowrap_mode = 2
 
 [node name="Button" type="Button" parent="AvisJeff/Panel2"]
 layout_mode = 0
 offset_right = 664.0
-offset_bottom = 91.0
+offset_bottom = 260.0
+theme_override_font_sizes/font_size = 32
+flat = true
+autowrap_mode = 2
 
 [node name="Button" type="Button" parent="AvisJeff"]
-offset_left = -538.509
-offset_top = 276.338
-offset_right = -254.509
-offset_bottom = 344.338
+offset_left = -543.034
+offset_top = 271.573
+offset_right = -259.034
+offset_bottom = 339.573
+metadata/_edit_use_anchors_ = true
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="AvisJeff"]
 position = Vector2(-408.784, 313.362)

@@ -24,9 +24,9 @@ var avis = [jeff, kevin, pecci]
 var avis_index = 0
 
 @onready
-var bonne_reponse = $Panel/bonne_option
+var bonne_reponse = $Panel/Button
 @onready
-var mauvaise_reponse = $Panel2/mauvaise_option
+var mauvaise_reponse = $Panel2/Button
 @onready
 var submit = $Button
 @onready
