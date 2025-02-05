@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://i1faaovka2j6"]
+[gd_scene load_steps=16 format=3 uid="uid://i1faaovka2j6"]
 
 [ext_resource type="Script" path="res://scenes/screens/shop_main_view.gd" id="1_voflh"]
 [ext_resource type="Texture2D" uid="uid://cc2pfp4m4hkka" path="res://assets/sprites/BG2.png" id="1_wm268"]
 [ext_resource type="PackedScene" uid="uid://rxt2kuiqvpbd" path="res://scenes/screens/acceuil.tscn" id="3_w2qtw"]
-[ext_resource type="PackedScene" uid="uid://bfvr6j5x2vooa" path="res://scenes/screens/etagere.tscn" id="4_rvbnc"]
+[ext_resource type="PackedScene" path="res://scenes/screens/etagere.tscn" id="4_rvbnc"]
 [ext_resource type="PackedScene" uid="uid://b7x7ykjtgj0n4" path="res://scenes/object/exclamation_mark.tscn" id="4_yenar"]
+[ext_resource type="PackedScene" uid="uid://dnsxfjpoabls7" path="res://node_2d.tscn" id="6_kx8co"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mdd2"]
 
@@ -103,6 +104,10 @@ position = Vector2(-493, -234)
 [node name="Etagère" parent="." instance=ExtResource("4_rvbnc")]
 visible = false
 position = Vector2(-470, -263)
+
+[node name="Commentaire" parent="." instance=ExtResource("6_kx8co")]
+visible = false
+position = Vector2(-715, -281)
 
 [connection signal="pressed" from="bouton/Button_accueil" to="." method="_on_button_acceuil_pressed"]
 [connection signal="pressed" from="bouton/Button_etagere" to="." method="_on_button_etagere_pressed"]

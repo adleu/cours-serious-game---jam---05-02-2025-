@@ -24,6 +24,7 @@ func _on_button_etagere_pressed() -> void:
 	_clear_main_view()
 
 func _on_button_commentaire_pressed() -> void:
+	$Commentaire.visible = true
 	pass
 
 func _clear_main_view() -> void:
