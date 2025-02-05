@@ -7,6 +7,11 @@ var characDialog = ["","Bonjour monsieur ahahaha ! Ma plaque est la suivante : 2
 var object_objectif = ["","<zorblux>","X78","AD BLUE","Norotau","205 55 R16"]
 var current_object = ""
 
+var reputation = 0
+
+func updateReputation(_reputation) -> void:
+	reputation = _reputation 
+
 var current_event = 0
 
 func increment_event():

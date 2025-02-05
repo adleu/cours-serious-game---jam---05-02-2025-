@@ -7,6 +7,9 @@
 bg_color = Color(0.420001, 0.687968, 0, 1)
 
 [sub_resource type="FontFile" id="FontFile_gaxfv"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -37,6 +40,9 @@ cache/0/24/0/scale = 1.0
 bg_color = Color(1, 0.339535, 0.308065, 1)
 
 [sub_resource type="FontFile" id="FontFile_blin1"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0

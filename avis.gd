@@ -58,6 +58,13 @@ func _on_button_button_down() -> void:
 	mauvaise_reponse.text = (avis[avis_index].mauvaise_reponse) 
 	submit.disabled = true
 	particle.emitting = true
+	
+	if selected_reponse == 1:
+		GameManager.updateReputation(GameManager.reputation + 5)
+	else:
+		GameManager.updateReputation(GameManager.reputation - 10)
+	
+	selected_reponse = -1
 
 
 func _on_first_response() -> void:

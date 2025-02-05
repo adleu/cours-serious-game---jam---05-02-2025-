@@ -72,9 +72,13 @@ func _on_button_3_pressed() -> void:
 			dialog.display_text("merci ! à la revoyure")
 			text_finished = false
 			timer_before_next_event = 10
+			GameManager.updateReputation(GameManager.reputation + 5)
 		else:
 			dialog.display_text("Ce n'est pas le bon bing chilling")
 			text_finished = false
+			GameManager.updateReputation(GameManager.reputation - 10)
+			
+	print((GameManager.reputation))
 			
 
 
