@@ -1,12 +1,107 @@
-[gd_scene load_steps=2 format=3 uid="uid://i1faaovka2j6"]
+[gd_scene load_steps=14 format=3 uid="uid://i1faaovka2j6"]
 
-[ext_resource type="Texture2D" uid="uid://cfjjg85xsitwo" path="res://assets/sprites/BG1.png" id="1_wn72l"]
+[ext_resource type="Script" path="res://scenes/screens/shop_main_view.gd" id="1_voflh"]
+[ext_resource type="Texture2D" uid="uid://cc2pfp4m4hkka" path="res://assets/sprites/BG2.png" id="1_wm268"]
+[ext_resource type="PackedScene" uid="uid://rxt2kuiqvpbd" path="res://scenes/screens/acceuil.tscn" id="3_w2qtw"]
+[ext_resource type="PackedScene" uid="uid://b7x7ykjtgj0n4" path="res://scenes/object/exclamation_mark.tscn" id="4_yenar"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mdd2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qpftn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vcscj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ckqc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2hrwa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v5vsw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i1qj0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4y5nl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yrti"]
 
 [node name="ShopMainView" type="Node2D"]
+script = ExtResource("1_voflh")
 
 [node name="Bg1" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(1.06013, 0.949973)
-texture = ExtResource("1_wn72l")
+texture = ExtResource("1_wm268")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Acceuil" parent="." instance=ExtResource("3_w2qtw")]
+visible = false
+offset_left = -479.0
+offset_top = -267.0
+offset_right = -479.0
+offset_bottom = -267.0
+
+[node name="mark" type="Node" parent="."]
+
+[node name="exclamation" parent="mark" instance=ExtResource("4_yenar")]
+position = Vector2(-72, 68)
+
+[node name="exclamation2" parent="mark" instance=ExtResource("4_yenar")]
+modulate = Color(0.332881, 0.332881, 0.332881, 0.431373)
+position = Vector2(-29, -46)
+
+[node name="exclamation3" parent="mark" instance=ExtResource("4_yenar")]
+modulate = Color(0.333333, 0.333333, 0.333333, 0.431373)
+position = Vector2(224, -122)
+
+[node name="bouton" type="Node" parent="."]
+
+[node name="Button_accueil" type="Button" parent="bouton"]
+offset_left = -109.0
+offset_top = 98.0
+offset_bottom = 164.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mdd2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_qpftn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vcscj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7ckqc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2hrwa")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_v5vsw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i1qj0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4y5nl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3yrti")
+
+[node name="Button_accueil2" type="Button" parent="bouton"]
+offset_left = -89.0
+offset_top = -15.0
+offset_right = 20.0
+offset_bottom = 51.0
+scale = Vector2(1.33274, 1.04862)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mdd2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_qpftn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vcscj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7ckqc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2hrwa")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_v5vsw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i1qj0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4y5nl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3yrti")
+
+[node name="Button_accueil3" type="Button" parent="bouton"]
+offset_left = 172.0
+offset_top = -119.0
+offset_right = 281.0
+offset_bottom = -53.0
+rotation = 0.556163
+scale = Vector2(1.47786, 1.03319)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6mdd2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_qpftn")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_vcscj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_7ckqc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2hrwa")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_v5vsw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i1qj0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4y5nl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3yrti")
+
+[connection signal="pressed" from="bouton/Button_accueil" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="bouton/Button_accueil2" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="bouton/Button_accueil3" to="." method="_on_button_pressed"]
