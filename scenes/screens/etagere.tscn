@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfvr6j5x2vooa"]
+
+[ext_resource type="Texture2D" uid="uid://din8ai5jfoa5k" path="res://assets/sprites/assset_Etagere/image.png" id="1_tqn85"]
+[ext_resource type="Script" path="res://scenes/screens/etagere.gd" id="1_wa1fq"]
+[ext_resource type="PackedScene" uid="uid://co36b0xtfm1hw" path="res://scenes/object/materiel.tscn" id="2_c5lmf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wa1fq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(476, 257)
+scale = Vector2(1, 0.799999)
+texture = ExtResource("1_tqn85")
+
+[node name="objet" type="Node2D" parent="."]
+
+[node name="Materiel" parent="objet" instance=ExtResource("2_c5lmf")]
+position = Vector2(331, 101)
+
+[node name="Materiel2" parent="objet" instance=ExtResource("2_c5lmf")]
+position = Vector2(619, 203)
+scale = Vector2(0.234079, 0.195082)
+
+[node name="Materiel3" parent="objet" instance=ExtResource("2_c5lmf")]
+position = Vector2(337, 425)
+scale = Vector2(0.26302, 0.27605)
+
+[node name="Materiel4" parent="objet" instance=ExtResource("2_c5lmf")]
+position = Vector2(348, 291)
+scale = Vector2(0.211387, 0.222459)
+
+[node name="Materiel5" parent="objet" instance=ExtResource("2_c5lmf")]
+position = Vector2(611, 415)
+scale = Vector2(0.26302, 0.27605)

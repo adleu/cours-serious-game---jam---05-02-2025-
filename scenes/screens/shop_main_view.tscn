@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://i1faaovka2j6"]
+[gd_scene load_steps=15 format=3 uid="uid://i1faaovka2j6"]
 
 [ext_resource type="Script" path="res://scenes/screens/shop_main_view.gd" id="1_voflh"]
 [ext_resource type="Texture2D" uid="uid://cc2pfp4m4hkka" path="res://assets/sprites/BG2.png" id="1_wm268"]
 [ext_resource type="PackedScene" uid="uid://rxt2kuiqvpbd" path="res://scenes/screens/acceuil.tscn" id="3_w2qtw"]
+[ext_resource type="PackedScene" uid="uid://bfvr6j5x2vooa" path="res://scenes/screens/etagere.tscn" id="4_rvbnc"]
 [ext_resource type="PackedScene" uid="uid://b7x7ykjtgj0n4" path="res://scenes/object/exclamation_mark.tscn" id="4_yenar"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mdd2"]
@@ -40,7 +41,11 @@ offset_top = -267.0
 offset_right = -479.0
 offset_bottom = -267.0
 
-[node name="mark" type="Node" parent="."]
+[node name="Etagère" parent="." instance=ExtResource("4_rvbnc")]
+visible = false
+position = Vector2(-470, -263)
+
+[node name="mark" type="Node2D" parent="."]
 
 [node name="exclamation" parent="mark" instance=ExtResource("4_yenar")]
 position = Vector2(-72, 68)
@@ -69,7 +74,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_i1qj0")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4y5nl")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3yrti")
 
-[node name="Button_accueil2" type="Button" parent="bouton"]
+[node name="Button_etagere" type="Button" parent="bouton"]
 offset_left = -89.0
 offset_top = -15.0
 offset_right = 20.0
@@ -85,7 +90,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_i1qj0")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4y5nl")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3yrti")
 
-[node name="Button_accueil3" type="Button" parent="bouton"]
+[node name="Button_commentaire" type="Button" parent="bouton"]
 offset_left = 172.0
 offset_top = -119.0
 offset_right = 281.0
@@ -102,6 +107,6 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_i1qj0")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4y5nl")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3yrti")
 
-[connection signal="pressed" from="bouton/Button_accueil" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="bouton/Button_accueil2" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="bouton/Button_accueil3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="bouton/Button_accueil" to="." method="_on_button_acceuil_pressed"]
+[connection signal="pressed" from="bouton/Button_etagere" to="." method="_on_button_etagere_pressed"]
+[connection signal="pressed" from="bouton/Button_commentaire" to="." method="_on_button_commentaire_pressed"]

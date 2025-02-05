@@ -12,10 +12,19 @@ func _process(delta: float) -> void:
 
 
 
-func _on_button_pressed() -> void:
+func _on_button_acceuil_pressed() -> void:
 	$Acceuil.visible = true
-	$Bg1.visible = false
+	_clear_main_view()
 	
+func _on_button_etagere_pressed() -> void:
+	$"Etagère".visible = true
+	_clear_main_view()
+
+func _on_button_commentaire_pressed() -> void:
+	pass
+
+func _clear_main_view() -> void:
+	$Bg1.visible = false
 	for child in $mark.get_children():
 		child.visible = false
 	

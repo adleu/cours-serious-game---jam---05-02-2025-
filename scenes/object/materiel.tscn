@@ -1,0 +1,55 @@
+[gd_scene load_steps=14 format=3 uid="uid://co36b0xtfm1hw"]
+
+[ext_resource type="Script" path="res://scenes/object/materiel.gd" id="1_7276b"]
+[ext_resource type="Texture2D" uid="uid://ceqfyqkv10vga" path="res://assets/sprites/assset_Etagere/pxArt-removebg-preview.png" id="1_tcedr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wywvy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b481q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gqtv0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hre66"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nlgpa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_107ew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ewky"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m6vxo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kkg2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4n8bj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8c46"]
+
+[node name="Materiel" type="Node2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_7276b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.00003, -1)
+scale = Vector2(1.00271, 0.737415)
+texture = ExtResource("1_tcedr")
+
+[node name="Button" type="Button" parent="Sprite2D"]
+offset_left = -183.17
+offset_top = -287.943
+offset_right = -175.17
+offset_bottom = -279.943
+scale = Vector2(43.8173, 77.3025)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wywvy")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_b481q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gqtv0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_hre66")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_nlgpa")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_107ew")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0ewky")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_m6vxo")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kkg2f")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4n8bj")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a8c46")
+
+[connection signal="pressed" from="Sprite2D/Button" to="." method="_on_button_pressed"]
