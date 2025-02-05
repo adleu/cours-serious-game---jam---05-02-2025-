@@ -4,9 +4,25 @@
 
 [node name="ShopMainView" type="Node2D"]
 
-[node name="Bg1" type="Sprite2D" parent="."]
+[node name="Bg2" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(1.06013, 0.949973)
 texture = ExtResource("1_wn72l")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 134.0
+offset_right = 134.0
+color = Color(0, 0, 0, 1)
