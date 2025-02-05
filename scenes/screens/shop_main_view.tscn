@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/screens/shop_main_view.gd" id="1_voflh"]
 [ext_resource type="Texture2D" uid="uid://cc2pfp4m4hkka" path="res://assets/sprites/BG2.png" id="1_wm268"]
 [ext_resource type="PackedScene" uid="uid://rxt2kuiqvpbd" path="res://scenes/screens/acceuil.tscn" id="3_w2qtw"]
-[ext_resource type="PackedScene" uid="uid://bfvr6j5x2vooa" path="res://scenes/screens/etagere.tscn" id="4_rvbnc"]
+[ext_resource type="PackedScene" path="res://scenes/screens/etagere.tscn" id="4_rvbnc"]
 [ext_resource type="PackedScene" uid="uid://b7x7ykjtgj0n4" path="res://scenes/object/exclamation_mark.tscn" id="4_yenar"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6mdd2"]
@@ -34,14 +34,6 @@ texture = ExtResource("1_wm268")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Acceuil" parent="." instance=ExtResource("3_w2qtw")]
-visible = false
-position = Vector2(-550, -277)
-
-[node name="Etagère" parent="." instance=ExtResource("4_rvbnc")]
-visible = false
-position = Vector2(-470, -263)
-
 [node name="mark" type="Node2D" parent="."]
 
 [node name="exclamation" parent="mark" instance=ExtResource("4_yenar")]
@@ -55,7 +47,7 @@ position = Vector2(-29, -46)
 modulate = Color(0.333333, 0.333333, 0.333333, 0.431373)
 position = Vector2(224, -122)
 
-[node name="bouton" type="Node" parent="."]
+[node name="bouton" type="Node2D" parent="."]
 
 [node name="Button_accueil" type="Button" parent="bouton"]
 offset_left = -109.0
@@ -103,6 +95,13 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_v5vsw")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_i1qj0")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_4y5nl")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3yrti")
+
+[node name="Acceuil" parent="." instance=ExtResource("3_w2qtw")]
+visible = false
+position = Vector2(-534, -237)
+
+[node name="Etagère" parent="." instance=ExtResource("4_rvbnc")]
+position = Vector2(-470, -263)
 
 [connection signal="pressed" from="bouton/Button_accueil" to="." method="_on_button_acceuil_pressed"]
 [connection signal="pressed" from="bouton/Button_etagere" to="." method="_on_button_etagere_pressed"]
