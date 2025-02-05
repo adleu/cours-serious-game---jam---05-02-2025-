@@ -36,10 +36,7 @@ texture = ExtResource("1_wm268")
 
 [node name="Acceuil" parent="." instance=ExtResource("3_w2qtw")]
 visible = false
-offset_left = -479.0
-offset_top = -267.0
-offset_right = -479.0
-offset_bottom = -267.0
+position = Vector2(-550, -277)
 
 [node name="Etagère" parent="." instance=ExtResource("4_rvbnc")]
 visible = false

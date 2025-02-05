@@ -7,6 +7,14 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_wa1fq")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3.0
+offset_top = -5.0
+offset_right = 37.0
+offset_bottom = 35.0
+scale = Vector2(24.12, 13.64)
+color = Color(0, 0, 0, 1)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(476, 257)
 scale = Vector2(1, 0.799999)
