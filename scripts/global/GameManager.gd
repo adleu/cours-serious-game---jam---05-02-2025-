@@ -9,6 +9,10 @@ var current_object = ""
 
 var reputation = 0
 
+var game_1_finishes = false
+var game_2_finishes = false
+
+
 func updateReputation(_reputation) -> void:
 	reputation = _reputation 
 

@@ -13,7 +13,6 @@ var reputation = 0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameManager.increment_event()
-	GameManager.increment_event()
 	exm2.change_Alpha(0.5)
 	exm3.change_Alpha(0.5)
 
@@ -21,7 +20,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if(GameManager.game_1_finishes && GameManager.game_2_finishes):
+		Utils.change_scene("res://scenes/screens/endScreen.tscn")
 
 
 

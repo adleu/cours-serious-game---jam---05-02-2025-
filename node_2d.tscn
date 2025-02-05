@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnsxfjpoabls7"]
+[gd_scene load_steps=8 format=3 uid="uid://bva1kpiavt0tg"]
 
 [ext_resource type="Texture2D" uid="uid://c0h0tvmpvh2sq" path="res://avis_jeff.png" id="1_y7ite"]
 [ext_resource type="Script" path="res://avis.gd" id="2_afcig"]

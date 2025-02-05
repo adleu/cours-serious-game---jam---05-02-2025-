@@ -49,6 +49,7 @@ func _process(delta: float) -> void:
 func _on_button_button_down() -> void:
 	if avis_index == 2:
 		visible = false
+		GameManager.game_2_finishes = true
 		return 
 	
 	
