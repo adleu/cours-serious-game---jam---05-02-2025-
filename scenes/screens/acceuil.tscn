@@ -147,5 +147,14 @@ offset_top = -4.0
 offset_right = 21.0
 offset_bottom = -4.0
 
+[node name="Button3" type="Button" parent="."]
+visible = false
+offset_left = 57.0
+offset_top = 405.0
+offset_right = 309.0
+offset_bottom = 489.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="finished_displaying" from="TextBox" to="." method="_on_text_box_finished_displaying"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
